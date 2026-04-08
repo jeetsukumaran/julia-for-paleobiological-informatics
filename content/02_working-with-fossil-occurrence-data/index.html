@@ -8,7 +8,7 @@
 
 <meta name="author" content="">
 
-<title>Analysis of the Paleobiology Database fossil occurrence data – (Just enough) Julia for paleobiological informatics</title>
+<title>Analysis of fossil occurrence data – (Just enough) Julia for paleobiological informatics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-author','listing-number-sections','listing-number-depth','listing-project','listing-engines','listing-execute','listing-reference-location','listing-format','listing-website','listing-custom-numbered-blocks','listing-filters','listing-language','listing-draft-mode','listing-date-created','listing-title','listing-order','listing-path','listing-outputHref','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-author','listing-number-sections','listing-number-depth','listing-project','listing-engines','listing-execute','listing-reference-location','listing-format','listing-website','listing-custom-numbered-blocks','listing-filters','listing-language','listing-draft-mode','listing-part-title','listing-date-created','listing-title','listing-order','listing-path','listing-outputHref','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-author","listing-number-sections","listing-number-depth","listing-project","listing-engines","listing-execute","listing-reference-location","listing-format","listing-website","listing-custom-numbered-blocks","listing-filters","listing-language","listing-draft-mode","listing-date-created","listing-title","listing-order","listing-path","listing-outputHref","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-author","listing-number-sections","listing-number-depth","listing-project","listing-engines","listing-execute","listing-reference-location","listing-format","listing-website","listing-custom-numbered-blocks","listing-filters","listing-language","listing-draft-mode","listing-part-title","listing-date-created","listing-title","listing-order","listing-path","listing-outputHref","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -168,7 +168,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/01_getting-started/index.html">Content</a></li><li class="breadcrumb-item"><a href="../../content/02_working-with-fossil-occurrence-data/index.html">Analysis of the Paleobiology Database fossil occurrence data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/01_getting-started/index.html">Content</a></li><li class="breadcrumb-item"><a href="../../content/02_working-with-fossil-occurrence-data/index.html">Analysis of fossil occurrence data</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -215,7 +215,7 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../content/02_working-with-fossil-occurrence-data/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Analysis of the Paleobiology Database fossil occurrence data</span></a>
+ <span class="menu-text">Analysis of fossil occurrence data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -265,9 +265,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/01_getting-started/index.html">Content</a></li><li class="breadcrumb-item"><a href="../../content/02_working-with-fossil-occurrence-data/index.html">Analysis of the Paleobiology Database fossil occurrence data</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../content/01_getting-started/index.html">Content</a></li><li class="breadcrumb-item"><a href="../../content/02_working-with-fossil-occurrence-data/index.html">Analysis of fossil occurrence data</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Analysis of the Paleobiology Database fossil occurrence data</h1>
+<h1 class="title">Analysis of fossil occurrence data</h1>
 </div>
 
 
@@ -291,71 +291,9 @@ window.Quarto = {
 <div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
 <section id="chapter-1.-range-through-time-diversity-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-1.-range-through-time-diversity-analysis">Chapter 1. <a href="../../content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html">Range through time diversity analysis</a></h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Details
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Synopsis</th>
-<th>Requirements</th>
-<th>References</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
 </section>
 <section id="chapter-2.-tba" class="level2">
 <h2 class="anchored" data-anchor-id="chapter-2.-tba">Chapter 2. <a href="../../content/02_working-with-fossil-occurrence-data/03_tracking-biotic-turnovers/index.html">TBA</a></h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Details
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Synopsis</th>
-<th>Requirements</th>
-<th>References</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
 <div class="listing-no-matching d-none">No matching items</div>
 </section>
 </div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
