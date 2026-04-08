@@ -7,13 +7,6 @@
     "text": "ImportantPart 1: Getting started\n\n\n\n\n\nChapter 1: Getting started\n\n\n\n\n\n\n\n\n\nImportantPart 2: (untitled)\n\n\n\n\n\n\nChapter 2: Analysis of the Paleobiology Database fossil occurrence data\n\n\nChapter 3: Recipes\n\n\n\n\nNo matching items\n Back to top"
   },
   {
-    "objectID": "index.html#chapter-8.-recipes",
-    "href": "index.html#chapter-8.-recipes",
-    "title": "Basics of paleobiological informatics with Julia",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
     "objectID": "content/02_working-with-fossil-occurrence-data/03_tracking-biotic-turnovers/index.html",
     "href": "content/02_working-with-fossil-occurrence-data/03_tracking-biotic-turnovers/index.html",
     "title": "TBA",
@@ -174,8 +167,8 @@
     ]
   },
   {
-    "objectID": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectves",
-    "href": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectves",
+    "objectID": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives",
+    "href": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives",
     "title": "Range through time diversity analysis",
     "section": "",
     "text": "We are going to build a plot of the temporal ranges of bear genera (family Ursidae): one horizontal line per genus, spanning the time from its earliest to latest fossil occurrence. Time runs on the x-axis (reversed, so older is to the left), genus names on the y-axis.\nBy the end of this tutorial we will have produced something like this:\nUrsus        |———————|\nAiluropoda        |—|\nIndarctos              |——|\n...\n              50  40  30  20  10  0 Ma",
@@ -294,11 +287,11 @@
     ]
   },
   {
-    "objectID": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectves-1",
-    "href": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectves-1",
+    "objectID": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives-1",
+    "href": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives-1",
     "title": "Range through time diversity analysis",
-    "section": "2.1 Objectves",
-    "text": "2.1 Objectves\nIn the previous tutorial we drew a range-through chart: one horizontal line per genus, showing when each genus first and last appeared in the fossil record.\nNow we want to collapse that picture into a single curve: how many genera were present at any given time?\nThe method we will use is called the standard (sampled-in-bin) method with range-through interpolation:\n\nWe divide geological time into named stratigraphic intervals (e.g. “Early Miocene”, “Late Pleistocene”).\nFor each genus we identify its first appearance datum (FAD) interval and its last appearance datum (LAD) interval.\nWe count a genus as present in any interval that falls between its FAD and LAD — even if no fossil from that genus was actually found in that interval. This is the interpolation step: we assume that if a genus was alive before and after a gap, it was alive during the gap too.\nFor each interval we count how many genera are present. That count is the diversity of the group at that time.\n\n\n\n\n\n\n\n\nNoteWhy interpolate?\n\n\n\n\n\nThe fossil record is incomplete. A genus that left no fossils in a particular interval was almost certainly still alive — it just was not preserved or has not yet been found. Interpolating between FAD and LAD is the standard way to correct for this preservation bias.",
+    "section": "2.1 Objectives",
+    "text": "2.1 Objectives\nIn the previous tutorial we drew a range-through chart: one horizontal line per genus, showing when each genus first and last appeared in the fossil record.\nNow we want to collapse that picture into a single curve: how many genera were present at any given time?\nThe method we will use is called the standard (sampled-in-bin) method with range-through interpolation:\n\nWe divide geological time into named stratigraphic intervals (e.g. “Early Miocene”, “Late Pleistocene”).\nFor each genus we identify its first appearance datum (FAD) interval and its last appearance datum (LAD) interval.\nWe count a genus as present in any interval that falls between its FAD and LAD — even if no fossil from that genus was actually found in that interval. This is the interpolation step: we assume that if a genus was alive before and after a gap, it was alive during the gap too.\nFor each interval we count how many genera are present. That count is the diversity of the group at that time.\n\n\n\n\n\n\n\n\nNoteWhy interpolate?\n\n\n\n\n\nThe fossil record is incomplete. A genus that left no fossils in a particular interval was almost certainly still alive — it just was not preserved or has not yet been found. Interpolating between FAD and LAD is the standard way to correct for this preservation bias.",
     "crumbs": [
       "Content",
       "Analysis of the Paleobiology Database fossil occurrence data",
@@ -426,11 +419,11 @@
     ]
   },
   {
-    "objectID": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectves-2",
-    "href": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectves-2",
+    "objectID": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives-2",
+    "href": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives-2",
     "title": "Range through time diversity analysis",
-    "section": "3.1 Objectves",
-    "text": "3.1 Objectves\nIn the previous tutorial we counted how many genera were present inside each stratigraphic interval, interpolating across gaps.\nThis tutorial uses a subtly different approach: the range-through method. Instead of asking “which genera were present in this interval?”, we ask “which genera were present across this interval boundary?” — meaning: observed both before and after a given point in time.\nA genus counts toward the diversity at a boundary only if it has occurrences both older and younger than that boundary. This is a stricter requirement, and it means we are measuring taxa that genuinely co-existed in time, rather than taxa whose ranges merely happen to span an interval by interpolation.\n\n\n\n\n\n\n\nNoteRange-through vs sampled-in-bin\n\n\n\n\n\nThe sampled-in-bin method (previous tutorial) counts every genus whose range spans an interval, including genera whose ranges only touch the interval at one end. The range-through method counts only genera that have documented occurrences on both sides of a boundary. It is more conservative but less susceptible to edge effects at the FAD or LAD.\n\n\nThe change to the code from the previous tutorial is small: one condition in the count call.",
+    "section": "3.1 Objectives",
+    "text": "3.1 Objectives\nIn the previous tutorial we counted how many genera were present inside each stratigraphic interval, interpolating across gaps.\nThis tutorial uses a subtly different approach: the range-through method. Instead of asking “which genera were present in this interval?”, we ask “which genera were present across this interval boundary?” — meaning: observed both before and after a given point in time.\nA genus counts toward the diversity at a boundary only if it has occurrences both older and younger than that boundary. This is a stricter requirement, and it means we are measuring taxa that genuinely co-existed in time, rather than taxa whose ranges merely happen to span an interval by interpolation.\n\n\n\n\n\n\n\nNoteRange-through vs sampled-in-bin\n\n\n\n\n\nThe sampled-in-bin method (previous tutorial) counts every genus whose range spans an interval, including genera whose ranges only touch the interval at one end. The range-through method counts only genera that have documented occurrences on both sides of a boundary. It is more conservative but less susceptible to edge effects at the FAD or LAD.\n\n\nThe change to the code from the previous tutorial is small: one condition in the count call.",
     "crumbs": [
       "Content",
       "Analysis of the Paleobiology Database fossil occurrence data",
@@ -588,42 +581,6 @@
     "crumbs": [
       "Content",
       "Analysis of the Paleobiology Database fossil occurrence data"
-    ]
-  },
-  {
-    "objectID": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives",
-    "href": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives",
-    "title": "Range through time diversity analysis",
-    "section": "",
-    "text": "We are going to build a plot of the temporal ranges of bear genera (family Ursidae): one horizontal line per genus, spanning the time from its earliest to latest fossil occurrence. Time runs on the x-axis (reversed, so older is to the left), genus names on the y-axis.\nBy the end of this tutorial we will have produced something like this:\nUrsus        |———————|\nAiluropoda        |—|\nIndarctos              |——|\n...\n              50  40  30  20  10  0 Ma",
-    "crumbs": [
-      "Content",
-      "Analysis of the Paleobiology Database fossil occurrence data",
-      "Range through time diversity analysis"
-    ]
-  },
-  {
-    "objectID": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives-1",
-    "href": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives-1",
-    "title": "Range through time diversity analysis",
-    "section": "2.1 Objectives",
-    "text": "2.1 Objectives\nIn the previous tutorial we drew a range-through chart: one horizontal line per genus, showing when each genus first and last appeared in the fossil record.\nNow we want to collapse that picture into a single curve: how many genera were present at any given time?\nThe method we will use is called the standard (sampled-in-bin) method with range-through interpolation:\n\nWe divide geological time into named stratigraphic intervals (e.g. “Early Miocene”, “Late Pleistocene”).\nFor each genus we identify its first appearance datum (FAD) interval and its last appearance datum (LAD) interval.\nWe count a genus as present in any interval that falls between its FAD and LAD — even if no fossil from that genus was actually found in that interval. This is the interpolation step: we assume that if a genus was alive before and after a gap, it was alive during the gap too.\nFor each interval we count how many genera are present. That count is the diversity of the group at that time.\n\n\n\n\n\n\n\n\nNoteWhy interpolate?\n\n\n\n\n\nThe fossil record is incomplete. A genus that left no fossils in a particular interval was almost certainly still alive — it just was not preserved or has not yet been found. Interpolating between FAD and LAD is the standard way to correct for this preservation bias.",
-    "crumbs": [
-      "Content",
-      "Analysis of the Paleobiology Database fossil occurrence data",
-      "Range through time diversity analysis"
-    ]
-  },
-  {
-    "objectID": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives-2",
-    "href": "content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html#objectives-2",
-    "title": "Range through time diversity analysis",
-    "section": "3.1 Objectives",
-    "text": "3.1 Objectives\nIn the previous tutorial we counted how many genera were present inside each stratigraphic interval, interpolating across gaps.\nThis tutorial uses a subtly different approach: the range-through method. Instead of asking “which genera were present in this interval?”, we ask “which genera were present across this interval boundary?” — meaning: observed both before and after a given point in time.\nA genus counts toward the diversity at a boundary only if it has occurrences both older and younger than that boundary. This is a stricter requirement, and it means we are measuring taxa that genuinely co-existed in time, rather than taxa whose ranges merely happen to span an interval by interpolation.\n\n\n\n\n\n\n\nNoteRange-through vs sampled-in-bin\n\n\n\n\n\nThe sampled-in-bin method (previous tutorial) counts every genus whose range spans an interval, including genera whose ranges only touch the interval at one end. The range-through method counts only genera that have documented occurrences on both sides of a boundary. It is more conservative but less susceptible to edge effects at the FAD or LAD.\n\n\nThe change to the code from the previous tutorial is small: one condition in the count call.",
-    "crumbs": [
-      "Content",
-      "Analysis of the Paleobiology Database fossil occurrence data",
-      "Range through time diversity analysis"
     ]
   }
 ]
