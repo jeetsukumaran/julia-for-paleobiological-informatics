@@ -1,0 +1,29 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/content/01_getting-started/01_introduction/index.html",
+      "/content/01_getting-started/02_setup-and-installation/index.html",
+      "/content/01_getting-started/index.html",
+      "/content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html",
+      "/content/02_working-with-fossil-occurrence-data/03_tracking-biotic-turnovers/index.html",
+      "/content/02_working-with-fossil-occurrence-data/index.html",
+      "/content/04_recipes/dataframes/index.html",
+      "/content/04_recipes/index.html"
+    ]
+  },
+  {
+    "listing": "/content/01_getting-started/index.html",
+    "items": [
+      "/content/01_getting-started/01_introduction/index.html",
+      "/content/01_getting-started/02_setup-and-installation/index.html"
+    ]
+  },
+  {
+    "listing": "/content/02_working-with-fossil-occurrence-data/index.html",
+    "items": [
+      "/content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html",
+      "/content/02_working-with-fossil-occurrence-data/03_tracking-biotic-turnovers/index.html"
+    ]
+  }
+]
