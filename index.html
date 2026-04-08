@@ -8,7 +8,7 @@
 
 <meta name="author" content="">
 
-<title>Basics of paleobiological informatics with Julia</title>
+<title>Basics of paleobiological informatics with Julia – (Just enough) Julia for paleobiological informatics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,9 +82,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-author','listing-number-sections','listing-number-depth','listing-project','listing-engines','listing-execute','listing-reference-location','listing-format','listing-website','listing-custom-numbered-blocks','listing-filters','listing-language','listing-draft-mode','listing-date-created','listing-title','listing-order','listing-path','listing-outputHref','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-listing',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-author','listing-number-sections','listing-number-depth','listing-project','listing-engines','listing-execute','listing-reference-location','listing-format','listing-website','listing-custom-numbered-blocks','listing-filters','listing-language','listing-draft-mode','listing-part-title','listing-title','listing-order','listing-listing','listing-path','listing-outputHref','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-author","listing-number-sections","listing-number-depth","listing-project","listing-engines","listing-execute","listing-reference-location","listing-format","listing-website","listing-custom-numbered-blocks","listing-filters","listing-language","listing-draft-mode","listing-date-created","listing-title","listing-order","listing-path","listing-outputHref","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-listing"],
+      searchColumns: ["listing-author","listing-number-sections","listing-number-depth","listing-project","listing-engines","listing-execute","listing-reference-location","listing-format","listing-website","listing-custom-numbered-blocks","listing-filters","listing-language","listing-draft-mode","listing-part-title","listing-title","listing-order","listing-listing","listing-path","listing-outputHref","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -148,7 +148,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Basics of paleobiological informatics with Julia</span>
+    <span class="navbar-title">(Just enough) Julia for paleobiological informatics</span>
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
@@ -287,31 +287,44 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<section id="chapter-1.-introduction-and-overview" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-1.-introduction-and-overview">Chapter 1. <a href="./content/01_getting-started/01_introduction/index.html">Introduction and overview</a></h2>
+<div class="part-level callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Part 1: Getting started
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<section id="chapter-1-getting-started" class="level3 callout-body-container callout-body">
+<h3 class="anchored" data-anchor-id="chapter-1-getting-started">Chapter 1: <a href="./content/01_getting-started/index.html">Getting started</a></h3>
 </section>
-<section id="chapter-2.-basic-setup-and-installation" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-2.-basic-setup-and-installation">Chapter 2. <a href="./content/01_getting-started/02_setup-and-installation/index.html">Basic setup and installation</a></h2>
+</div>
+</div>
+<div class="part-level callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Part 2: (untitled)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<section id="chapter-2-analysis-of-the-paleobiology-database-fossil-occurrence-data" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-2-analysis-of-the-paleobiology-database-fossil-occurrence-data">Chapter 2: <a href="./content/02_working-with-fossil-occurrence-data/index.html">Analysis of the Paleobiology Database fossil occurrence data</a></h3>
 </section>
-<section id="chapter-3.-getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-3.-getting-started">Chapter 3. <a href="./content/01_getting-started/index.html">Getting started</a></h2>
+<section id="chapter-3-recipes" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-3-recipes">Chapter 3: <a href="./content/04_recipes/index.html">Recipes</a></h3>
 </section>
-<section id="chapter-4.-range-through-time-diversity-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-4.-range-through-time-diversity-analysis">Chapter 4. <a href="./content/02_working-with-fossil-occurrence-data/02_range-through-time-diversity/index.html">Range through time diversity analysis</a></h2>
-</section>
-<section id="chapter-5.-tba" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-5.-tba">Chapter 5. <a href="./content/02_working-with-fossil-occurrence-data/03_tracking-biotic-turnovers/index.html">TBA</a></h2>
-</section>
-<section id="chapter-6.-analysis-of-the-paleobiology-database-fossil-occurrence-data" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-6.-analysis-of-the-paleobiology-database-fossil-occurrence-data">Chapter 6. <a href="./content/02_working-with-fossil-occurrence-data/index.html">Analysis of the Paleobiology Database fossil occurrence data</a></h2>
-</section>
-<section id="chapter-7.-data-frame-kitchen" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-7.-data-frame-kitchen">Chapter 7. <a href="./content/04_recipes/dataframes/index.html">Data frame kitchen</a></h2>
-</section>
-<section id="chapter-8.-recipes" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-8.-recipes">Chapter 8. <a href="./content/04_recipes/index.html">Recipes</a></h2>
+</div>
+</div>
+</div>
 <div class="listing-no-matching d-none">No matching items</div>
-</section>
 </div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
